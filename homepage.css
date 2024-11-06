@@ -1,0 +1,17 @@
+
+
+header .navbar { position: fixed;
+    top:0;
+    
+    z-index:999;
+width: 100%;}
+
+.navbar .navbar-brand{max-width:100px !important;}
+
+#demo {
+    margin-bottom: 20px; /* Add gap below the carousel */
+}
+
+.container-fluid.h6{
+    color: orange;
+}

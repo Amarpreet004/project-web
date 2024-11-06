@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Video with Centered Overlay and Navigation</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Make body and html elements cover full screen */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Full-screen video styling */
+        .full-screen-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Centered overlay content styling */
+        .overlay-content {
+            display: flex;
+            flex-direction: column; /* Stack the image and buttons vertically */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Styling for the buttons and text in one line */
+        .button-row {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between the buttons and the text */
+        }
+
+        /* Styling for buttons */
+        .overlay-button {
+            background-color: orange;
+            height: 40px;
+            width: 100px;
+            border: none;
+            border-radius: 80px;
+            color: white;
+            font-size: medium;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px; /* Align text vertically in button */
+        }
+
+        /* Hover effect for buttons */
+        .overlay-button:hover {
+            background-color: darkorange;
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+        }
+
+        /* Styling for text */
+        .overlay-text {
+            color: white;
+            font-size: medium;
+        }
+
+        /* Styling for the image */
+        .overlay-image {
+            width: 300px;
+            margin-bottom: 20px; /* Space between image and buttons */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="full-screen-video">
+        <source src="images/FPV Drone Flight through Beautiful Iceland Canyon - Joshua Turner (1080p, h264, youtube).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay content with image on top of buttons -->
+    <div class="overlay-content">
+        <img src="images/gvuvg.png" alt="Logo" class="overlay-image">
+        
+        <!-- Buttons and text in one line -->
+        <div class="button-row">
+            <a href="index.html" class="overlay-button">Get Started</a>
+            <div class="overlay-text">OR</div>
+            <a href="login.html" class="overlay-button">Log In</a>
+        </div>
+    </div>
+</body>
+</html>
